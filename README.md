@@ -5,3 +5,6 @@ access for other social service except Google, you have to
 add this line into /etc/hosts file:
     127.0.0.1   mysite.com
 This domain name will be use for our website.
+
+To run server with https protocol:
+    python manage.py runserver_plus --cert-file cert.crt

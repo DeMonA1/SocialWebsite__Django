@@ -8,3 +8,8 @@ This domain name will be use for our website.
 
 To run server with https protocol:
     python manage.py runserver_plus --cert-file cert.crt
+
+After creating your app in GooleAPI add these constants
+to the .env file is in the root project directory:
+    GOOGLE_OAUTH2_KEY
+    GOOGLE_OAUTH2_SECRET

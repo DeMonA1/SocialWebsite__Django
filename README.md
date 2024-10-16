@@ -11,5 +11,5 @@ To run server with https protocol:
 
 After creating your app in GooleAPI add these constants
 to the .env file is in the root project directory:
-    GOOGLE_OAUTH2_KEY
+    GOOGLE_OAUTH2_KEY (in Goole API page has the name as 'Client ID')
     GOOGLE_OAUTH2_SECRET

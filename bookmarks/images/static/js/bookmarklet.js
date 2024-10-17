@@ -19,3 +19,31 @@ boxHTML = `<div id="bookmarklet">
             <div class="images"></div>
             </div>`;
 body.innerHTML += boxHTML;
+
+
+function bookmarkletLaunch() {
+    bookmarklet = document.getElementById('bookmarklet');
+    var imagesFound = bookmarklet.querySelector('.images');
+
+    // clear images found
+    imagesFound.innerHTML = '';
+    // display bookmarklet
+    bookmarklet.style.display = 'block';
+
+    // cloase event
+    bookmarklet.querySelector('#close').addEventListener('click', function(){
+        bookmarklet.style.display = 'none'});
+
+    // find images in the DOM with the minimum dimensions
+    images = document.querySelectorAll('img[src$=".jpg"], img[src$=".jpeg"], img[src$=".png"]');
+    images.forEach(image => {
+        if(image.naturalWidth >= minWidth && image.naturalHeight >= minHeight) {
+            var imageFound = document.createElement('img');
+            imageFound.src = image.src;
+            imagesFound.append(imageFound);
+        }
+    })
+}
+
+// launch the bookmarklet
+bookmarkletLaunch();

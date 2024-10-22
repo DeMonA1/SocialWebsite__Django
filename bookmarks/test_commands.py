@@ -12,3 +12,24 @@ image_type
 image_type.model_class()
 from images.models import Image
 ContentType.objects.get_for_model(Image)
+
+# test ORM queries with Django Debug Toolbar
+# python manage.py debugsqlshell
+from images.models import Image
+Image.objects.get(id=1)
+
+
+## redis commands in the container shell
+# > SET name "Peter"
+# GET name
+# EXISTS name
+# EXPIRE name 2
+# SET total 1
+# DEL total
+
+
+# Python with Redis
+import redis
+r = redis.Redis(host='localhost', port=6379, db=0)
+r.set('foo', 'bar')
+r.get('foo')

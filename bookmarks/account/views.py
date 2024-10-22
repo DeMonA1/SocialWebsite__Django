@@ -38,12 +38,13 @@ def user_login(request):
 @login_required
 def dashboard(request):
     # display all actions by default
-    actions = Action.objects.exclude(user=request.user)
+    actions = {}
     following_ids = request.user.following.values_list('id', flat=True)
     if following_ids:
+        actions = Action.objects.exclude(user=request.user)
         # if user is following others, retrieve only their  actions
         actions = actions.filter(user_id__in=following_ids)
-    actions = actions.select_related('user', 'user__profile').prefetch_related('target')[:10]
+        actions = actions.select_related('user', 'user__profile').prefetch_related('target')[:10]
     return render(request,
                   'account/dashboard.html',
                   {'section': 'dashboard',
@@ -129,6 +130,7 @@ def user_follow(request):
             else:
                 Contact.objects.filter(user_from=request.user,
                                        user_to=user).delete()
+                create_action(request.user, 'is unfollowing', user)
             return JsonResponse({'status': 'ok'})
         except User.DoesNotExist:
             return JsonResponse({"status": "error"})

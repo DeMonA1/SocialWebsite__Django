@@ -23,3 +23,8 @@ In another shell:
 
     redis-cli
     
+TO RUN the bookmark project:
+
+- You should install docker;
+- Run following command:
+    docker compose up

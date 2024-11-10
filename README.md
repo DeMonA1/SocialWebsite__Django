@@ -28,3 +28,8 @@ TO RUN the bookmark project:
 - You should install docker;
 - Run following command:
     docker compose up
+
+!!!WARNING!!!
+Be carefull with http and https!!
+If you wanna run server in http, use the simple runserver command,
+otherwise use cert.

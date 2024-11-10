@@ -15,7 +15,7 @@ to the .env file is in the root project directory:
     GOOGLE_OAUTH2_SECRET
 
 To create Redis docker container:
-    docker pull redis
+    docker pull redis;
     docker run --it --name redis -p 6379:6379 redis
 
 In another shell:

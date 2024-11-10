@@ -15,8 +15,8 @@ services:
     command: >
       sh -c "python /code/bookmarks/manage.py makemigrations && 
               python /code/bookmarks/manage.py migrate && 
-              python /code/bookmarks/manage.py runserver 0.0.0.0:8000"
-    ports:
+              python /code/bookmarks/manage.py runserver_plus 0.0.0.0:8000 --cert-file cert.crt"
+    ports:              # uppper --cert-file .... crt, because it doesn't work on http:// protocol
       - "8000:8000"
     depends_on:
       - web_migrate

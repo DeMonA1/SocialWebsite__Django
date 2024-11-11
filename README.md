@@ -33,3 +33,5 @@ TO RUN the bookmark project:
 Be carefull with http and https!!
 If you wanna run server in http, use the simple runserver command,
 otherwise use cert.
+
+While using this app, you have to turn off adblocker.

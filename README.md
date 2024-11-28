@@ -12,7 +12,7 @@ The simple launch:
 python manage.py runserver
 ```
 In order to launch SocialWebsite docker container:
-- [x] [Install docker-desktop](https://docs.docker.com/desktop/setup/install/linux/);
+- [x] [Install docker-desktop](https://docs.docker.com/desktop/setup/install/linux/)
 - [x] Run following command:
 ```
     docker compose up
@@ -29,8 +29,8 @@ This domain name will be use for our website.
 
 
 
-After creating your app in GooleAPI add these constants
-to the .env file is in the root project directory:
+After creating your app in the GooleAPI add these constants
+to the .env file, which is located in the root project directory:
     GOOGLE_OAUTH2_KEY (in Goole API page has the name as 'Client ID')
     GOOGLE_OAUTH2_SECRET
 

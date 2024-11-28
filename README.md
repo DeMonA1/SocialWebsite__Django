@@ -12,7 +12,7 @@ The simple launch:
 python manage.py runserver
 ```
 In order to launch SocialWebsite docker container:
-- [x] install docker;
+- [x] [Install docker-desktop](https://docs.docker.com/desktop/setup/install/linux/);
 - [x] Run following command:
 ```
     docker compose up

@@ -2,6 +2,21 @@
 
 > [!TIP]
 > [Main Django commands](https://github.com/DeMonA1/MyBlog__Django/blob/main/README.md#diamonds-basic-django-commands)
+## Launch service
+To run server with https protocol:
+```
+python manage.py runserver_plus --cert-file cert.crt
+```
+The simple launch:
+```
+python manage.py runserver
+```
+In order to launch SocialWebsite docker container:
+-[x] install docker;
+-[x] Run following command:
+```
+    docker compose up
+```
 
 ## :people_hugging: Social authentication via Google
 For access to social feature from python-social-auth and
@@ -11,8 +26,8 @@ add this line into /etc/hosts file:
 
 This domain name will be use for our website.
 
-To run server with https protocol:
-    python manage.py runserver_plus --cert-file cert.crt
+
+
 
 After creating your app in GooleAPI add these constants
 to the .env file is in the root project directory:
@@ -27,12 +42,6 @@ In another shell:
     docker exec -it redis sh
 
     redis-cli
-    
-TO RUN the bookmark project:
-
-- You should install docker;
-- Run following command:
-    docker compose up
 
 !!!WARNING!!!
 Be carefull with http and https!!

@@ -1,4 +1,7 @@
-# SocialWebsite__Django
+# SocialWebsite
+
+> [!TIP]
+> [Main Django commands](https://github.com/DeMonA1/MyBlog__Django/blob/main/README.md#diamonds-basic-django-commands)
 
 For access to social feature from python-social-auth and
 access for other social service except Google, you have to

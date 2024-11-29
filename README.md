@@ -2,7 +2,7 @@
 
 > [!TIP]
 > [Main Django commands](https://github.com/DeMonA1/MyBlog__Django/blob/main/README.md#diamonds-basic-django-commands)
-## Launch service
+## :hammer_and_pick: Launch service
 To run server with https protocol:
 ```
 python manage.py runserver_plus --cert-file cert.crt
